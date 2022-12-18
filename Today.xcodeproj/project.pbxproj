@@ -9,21 +9,23 @@
 /* Begin PBXBuildFile section */
 		9C5F7C69294E0A4D00DEF4E0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C5F7C68294E0A4D00DEF4E0 /* AppDelegate.swift */; };
 		9C5F7C6B294E0A4D00DEF4E0 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C5F7C6A294E0A4D00DEF4E0 /* SceneDelegate.swift */; };
-		9C5F7C6D294E0A4D00DEF4E0 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C5F7C6C294E0A4D00DEF4E0 /* ViewController.swift */; };
+		9C5F7C6D294E0A4D00DEF4E0 /* ReminderListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C5F7C6C294E0A4D00DEF4E0 /* ReminderListViewController.swift */; };
 		9C5F7C70294E0A4D00DEF4E0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9C5F7C6E294E0A4D00DEF4E0 /* Main.storyboard */; };
 		9C5F7C72294E0A4E00DEF4E0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9C5F7C71294E0A4E00DEF4E0 /* Assets.xcassets */; };
 		9C5F7C75294E0A4E00DEF4E0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9C5F7C73294E0A4E00DEF4E0 /* LaunchScreen.storyboard */; };
+		9C5F7C7E294E0BAB00DEF4E0 /* Reminder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C5F7C7D294E0BAB00DEF4E0 /* Reminder.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		9C5F7C65294E0A4D00DEF4E0 /* Today.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Today.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9C5F7C68294E0A4D00DEF4E0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9C5F7C6A294E0A4D00DEF4E0 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		9C5F7C6C294E0A4D00DEF4E0 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		9C5F7C6C294E0A4D00DEF4E0 /* ReminderListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReminderListViewController.swift; sourceTree = "<group>"; };
 		9C5F7C6F294E0A4D00DEF4E0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		9C5F7C71294E0A4E00DEF4E0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		9C5F7C74294E0A4E00DEF4E0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		9C5F7C76294E0A4E00DEF4E0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9C5F7C7D294E0BAB00DEF4E0 /* Reminder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Reminder.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,14 +59,23 @@
 			isa = PBXGroup;
 			children = (
 				9C5F7C68294E0A4D00DEF4E0 /* AppDelegate.swift */,
+				9C5F7C7C294E0B8600DEF4E0 /* Models */,
 				9C5F7C6A294E0A4D00DEF4E0 /* SceneDelegate.swift */,
-				9C5F7C6C294E0A4D00DEF4E0 /* ViewController.swift */,
+				9C5F7C6C294E0A4D00DEF4E0 /* ReminderListViewController.swift */,
 				9C5F7C6E294E0A4D00DEF4E0 /* Main.storyboard */,
 				9C5F7C71294E0A4E00DEF4E0 /* Assets.xcassets */,
 				9C5F7C73294E0A4E00DEF4E0 /* LaunchScreen.storyboard */,
 				9C5F7C76294E0A4E00DEF4E0 /* Info.plist */,
 			);
 			path = Today;
+			sourceTree = "<group>";
+		};
+		9C5F7C7C294E0B8600DEF4E0 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				9C5F7C7D294E0BAB00DEF4E0 /* Reminder.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -138,9 +149,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9C5F7C6D294E0A4D00DEF4E0 /* ViewController.swift in Sources */,
+				9C5F7C6D294E0A4D00DEF4E0 /* ReminderListViewController.swift in Sources */,
 				9C5F7C69294E0A4D00DEF4E0 /* AppDelegate.swift in Sources */,
 				9C5F7C6B294E0A4D00DEF4E0 /* SceneDelegate.swift in Sources */,
+				9C5F7C7E294E0BAB00DEF4E0 /* Reminder.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
