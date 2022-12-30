@@ -8,14 +8,14 @@
 import UIKit
 
 extension ReminderListViewController {
-    typealias DataSourse = UICollectionViewDiffableDataSource<Int, String>
+    typealias DataSourse = UICollectionViewDiffableDataSource<Int, Reminder.ID>
     //UICollectionViewDiffableDataSource - обеспечивает поведение, которое эффективно и безопасно управляет обновлениями данных вашего представления коллекции.
     
-    typealias SnapShot = NSDiffableDataSourceSnapshot<Int, String>
+    typealias SnapShot = NSDiffableDataSourceSnapshot<Int, Reminder.ID>
     
     
-    func cellRegistrationHandler(cell: UICollectionViewListCell, indexPath: IndexPath, id: String){
-        let reminder =  Reminder.sampleData[indexPath.item]
+    func cellRegistrationHandler(cell: UICollectionViewListCell, indexPath: IndexPath, id: Reminder.ID){
+        let reminder =  reminder(for: id)
         //1. запрашиваем временный экземпляр конфигурации ячейки:
         var contentConfiguration = cell.defaultContentConfiguration()
        //2. устанавливаем значения для свойств, котторые хотим изменить
@@ -47,5 +47,15 @@ extension ReminderListViewController {
         let button = UIButton()
         button.setImage(image, for: .normal)
         return UICellAccessory.CustomViewConfiguration(customView: button, placement: .leading(displayed: .always))
+    }
+    
+    func reminder(for id: Reminder.ID) -> Reminder {
+        let index = reminders.indexOfReminder(with: id)
+        return reminders[index]
+    }
+    
+    func update(_ reminder: Reminder, with id: Reminder.ID){
+        let index = reminders.indexOfReminder(with: id)
+        reminders[index] = reminder
     }
 }
