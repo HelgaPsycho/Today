@@ -13,6 +13,16 @@ extension ReminderListViewController {
     
     typealias SnapShot = NSDiffableDataSourceSnapshot<Int, Reminder.ID>
     
+    func updateSnapshot(reloading ids: [Reminder.ID] = []) {
+        var snapShot = SnapShot()
+        snapShot.appendSections([0])
+        snapShot.appendItems(reminders.map{ $0.id })
+        if !ids.isEmpty {
+            snapShot.reloadItems(ids)
+        }
+        dataSourse.apply(snapShot)
+    }
+    
     
     func cellRegistrationHandler(cell: UICollectionViewListCell, indexPath: IndexPath, id: Reminder.ID){
         let reminder =  reminder(for: id)
@@ -43,6 +53,7 @@ extension ReminderListViewController {
         var reminder = reminder(for: id)
         reminder.isComplete.toggle()
         update(reminder, with: id)
+        updateSnapshot(reloading: [id])
     }
     
     
