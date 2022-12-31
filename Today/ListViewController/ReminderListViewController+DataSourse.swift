@@ -13,6 +13,15 @@ extension ReminderListViewController {
     
     typealias SnapShot = NSDiffableDataSourceSnapshot<Int, Reminder.ID>
     
+    
+    var reminderCompletedValue: String {
+        NSLocalizedString("Completed", comment: "Reminder comleted value")
+    }
+    
+    var reminderNotCompletedValue: String {
+        NSLocalizedString("Not completed", comment: "Reminder not completed value")
+    }
+    
     func updateSnapshot(reloading ids: [Reminder.ID] = []) {
         var snapShot = SnapShot()
         snapShot.appendSections([0])
@@ -37,8 +46,9 @@ extension ReminderListViewController {
         
         var doneButtonConfiguration = doneButtonConfiguration(for: reminder)
         doneButtonConfiguration.tintColor = UIColor(named: "todayListCellDoneButtonTint")
+        cell.accessibilityCustomActions = [doneButtonAccessibilityAction(for: reminder)]
+        cell.accessibilityValue = reminder.isComplete ? reminderCompletedValue : reminderNotCompletedValue
         cell.accessories = [ .customView(configuration: doneButtonConfiguration), .disclosureIndicator(displayed: .always)]
-        
         var backgroundConfiguration = UIBackgroundConfiguration.listGroupedCell()
         backgroundConfiguration.backgroundColor = UIColor(named: "todayBackgroundColor")
         cell.backgroundConfiguration = backgroundConfiguration
@@ -56,6 +66,14 @@ extension ReminderListViewController {
         updateSnapshot(reloading: [id])
     }
     
+    private func doneButtonAccessibilityAction(for reminder: Reminder) -> UIAccessibilityCustomAction {
+        let name = NSLocalizedString("Toggle completion", comment: "Reminder done button accessibility label")
+        let action = UIAccessibilityCustomAction(name: name) { [weak self]action in
+            self?.completeReminder(with: reminder.id)
+            return true
+        }
+        return action
+    }
     
     private func doneButtonConfiguration(for reminder: Reminder) -> UICellAccessory.CustomViewConfiguration {
         let symbolName = reminder.isComplete ? "circle.fill" : "circle"
