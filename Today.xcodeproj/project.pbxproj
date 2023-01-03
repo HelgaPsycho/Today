@@ -20,6 +20,7 @@
 		9CDC3A1C295F7D7D00F5D573 /* ReminderListViewController+Actions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CDC3A1B295F7D7D00F5D573 /* ReminderListViewController+Actions.swift */; };
 		9CDC3A1E296061FA00F5D573 /* ReminderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CDC3A1D296061FA00F5D573 /* ReminderViewController.swift */; };
 		9CDC3A212960650800F5D573 /* ReminderViewController+Row.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CDC3A202960650800F5D573 /* ReminderViewController+Row.swift */; };
+		9CDC3A232964079F00F5D573 /* Colors ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CDC3A222964079F00F5D573 /* Colors ext.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,6 +39,7 @@
 		9CDC3A1B295F7D7D00F5D573 /* ReminderListViewController+Actions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ReminderListViewController+Actions.swift"; sourceTree = "<group>"; };
 		9CDC3A1D296061FA00F5D573 /* ReminderViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReminderViewController.swift; sourceTree = "<group>"; };
 		9CDC3A202960650800F5D573 /* ReminderViewController+Row.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ReminderViewController+Row.swift"; sourceTree = "<group>"; };
+		9CDC3A222964079F00F5D573 /* Colors ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Colors ext.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -76,6 +78,7 @@
 				9C5F7C81294F9F2800DEF4E0 /* ListViewController */,
 				9CDC3A1F296064D300F5D573 /* DetailViewController */,
 				9C5F7C6E294E0A4D00DEF4E0 /* Main.storyboard */,
+				9CDC3A222964079F00F5D573 /* Colors ext.swift */,
 				9C5F7C71294E0A4E00DEF4E0 /* Assets.xcassets */,
 				9C5F7C73294E0A4E00DEF4E0 /* LaunchScreen.storyboard */,
 				9C5F7C76294E0A4E00DEF4E0 /* Info.plist */,
@@ -184,6 +187,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				9CDC3A1C295F7D7D00F5D573 /* ReminderListViewController+Actions.swift in Sources */,
+				9CDC3A232964079F00F5D573 /* Colors ext.swift in Sources */,
 				9C5F7C6D294E0A4D00DEF4E0 /* ReminderListViewController.swift in Sources */,
 				9C5F7C80294F972C00DEF4E0 /* Date+Today.swift in Sources */,
 				9C5F7C69294E0A4D00DEF4E0 /* AppDelegate.swift in Sources */,
