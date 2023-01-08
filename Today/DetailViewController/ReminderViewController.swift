@@ -35,8 +35,19 @@ class ReminderViewController: UICollectionViewController {
         }
         
         navigationItem.title = NSLocalizedString("Reminder", comment: "Reminder view controller title")
-        
+        //UIViewController имеем свойство editButtonItem, нажатие на кнопку Edit автоматически переключает между режимами "Edit" и "Done" и вызывает метод setEditing(_:animated:). Присваиваем эту кнопку к правой кнопке navigation controller-a.
+        navigationItem.rightBarButtonItem = editButtonItem
+    
         updateSnapshotForViewing()
+    }
+    
+    override func setEditing(_ editing: Bool, animated: Bool) {
+        super.setEditing(editing, animated: animated)
+        if editing {
+            updateSnapshotForEditing()
+        } else {
+            updateSnapshotForViewing()
+        }
     }
     
     func cellRegistrationHandler(cell: UICollectionViewListCell, indexPath: IndexPath, row: Row){
