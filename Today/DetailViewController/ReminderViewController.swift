@@ -8,8 +8,8 @@
 import UIKit
 
 class ReminderViewController: UICollectionViewController {
-    private typealias DataSourse = UICollectionViewDiffableDataSource<Int, Row>
-    private typealias SnapShot = NSDiffableDataSourceSnapshot<Int, Row>
+    private typealias DataSourse = UICollectionViewDiffableDataSource<Section, Row>
+    private typealias SnapShot = NSDiffableDataSourceSnapshot<Section, Row>
     
     var reminder: Reminder
     private var dataSourse: DataSourse!
@@ -50,9 +50,17 @@ class ReminderViewController: UICollectionViewController {
     
     func updateSnapshot() {
         var snapshot = SnapShot()
-        snapshot.appendSections([0])
-        snapshot.appendItems([.viewTitle, .viewDate, .viewTime, .viewNotes],  toSection: 0)
+        snapshot.appendSections([.view])
+        snapshot.appendItems([.viewTitle, .viewDate, .viewTime, .viewNotes],  toSection: .view)
         dataSourse.apply(snapshot)
+    }
+    
+    private func section(for indexPath: IndexPath) -> Section {
+        let sectionNumber = isEditing ? indexPath.section + 1 : indexPath.section
+        guard let section = Section(rawValue: sectionNumber) else {
+            fatalError("Unable to find matchin section")
+        }
+        return section
     }
     
     func text(for row: Row) -> String? {
