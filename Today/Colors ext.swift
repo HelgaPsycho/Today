@@ -10,4 +10,5 @@ import UIKit
 
 extension UIColor {
     static var todayPrimaryTint = UIColor(named: "todayPrimaryTint")
+    static var todayNavigationBackground = UIColor(named: "todayNavigationBackground")
 }
