@@ -22,6 +22,7 @@
 		9CDC3A212960650800F5D573 /* ReminderViewController+Row.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CDC3A202960650800F5D573 /* ReminderViewController+Row.swift */; };
 		9CDC3A232964079F00F5D573 /* Colors ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CDC3A222964079F00F5D573 /* Colors ext.swift */; };
 		9CDC3A25296AF8B400F5D573 /* ReminderViewController+Section.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CDC3A24296AF8B400F5D573 /* ReminderViewController+Section.swift */; };
+		9CDC3A272971A8F400F5D573 /* ReminderViewController+CellConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CDC3A262971A8F400F5D573 /* ReminderViewController+CellConfiguration.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -42,6 +43,7 @@
 		9CDC3A202960650800F5D573 /* ReminderViewController+Row.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ReminderViewController+Row.swift"; sourceTree = "<group>"; };
 		9CDC3A222964079F00F5D573 /* Colors ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Colors ext.swift"; sourceTree = "<group>"; };
 		9CDC3A24296AF8B400F5D573 /* ReminderViewController+Section.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ReminderViewController+Section.swift"; sourceTree = "<group>"; };
+		9CDC3A262971A8F400F5D573 /* ReminderViewController+CellConfiguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ReminderViewController+CellConfiguration.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -114,6 +116,7 @@
 				9CDC3A1D296061FA00F5D573 /* ReminderViewController.swift */,
 				9CDC3A202960650800F5D573 /* ReminderViewController+Row.swift */,
 				9CDC3A24296AF8B400F5D573 /* ReminderViewController+Section.swift */,
+				9CDC3A262971A8F400F5D573 /* ReminderViewController+CellConfiguration.swift */,
 			);
 			path = DetailViewController;
 			sourceTree = "<group>";
@@ -198,6 +201,7 @@
 				9C5F7C83294F9FA500DEF4E0 /* ReminderListViewController+DataSourse.swift in Sources */,
 				9CDC3A1E296061FA00F5D573 /* ReminderViewController.swift in Sources */,
 				9CDC3A212960650800F5D573 /* ReminderViewController+Row.swift in Sources */,
+				9CDC3A272971A8F400F5D573 /* ReminderViewController+CellConfiguration.swift in Sources */,
 				9C5F7C6B294E0A4D00DEF4E0 /* SceneDelegate.swift in Sources */,
 				9CDC3A1A295F7B9700F5D573 /* ReminderDoneButton.swift in Sources */,
 				9C5F7C7E294E0BAB00DEF4E0 /* Reminder.swift in Sources */,
